@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="birDay">
+
+	<!-- 1-1.1insert -->
+	
+	<insert id="insert" parameterType="java.util.Map">
+	INSERT INTO TB_BIRTH_DAY ( NAME,WRITER,DATE1,IDX,WRITE_DATE,UPDATE_DATE ,UPDATER )
+	
+	 VALUES ( #{NAME},'MASTER_E',#{DATE1},SEQ_BIRTH_DAY.NEXTVAL,SYSDATE,SYSDATE,'MASTER_E'  )
+	</insert>
+	<!-- 2-1.1insert 끝 -->
+	
+	
+	<!-- 1-2.2select-->
+	<!-- 회원 목록 기능-->
+	<select id="total" resultType="mybatis.vo.VOBirthD">
+		SELECT * FROM TB_BIRTH_DAY
+					  	
+	</select>
+	<select id="searchId" parameterType="String" resultType="mybatis.vo.VOBirthD">
+		SELECT * FROM TB_BIRTH_DAY  WHERE IDX = #{ID}
+	</select>
+	<!-- 2-2.2select 끝-->
+	
+	<!-- 1-3.3update -->
+	<!-- 회원 수정 기능-->
+	<update id="update" parameterType="java.util.Map">
+		UPDATE TB_BIRTH_DAY
+		 <trim prefix=" SET " suffixOverrides=",">
+		 
+			<if test="NAME != null">
+				NAME = #{NAME},
+			</if>
+			<if test="DATE1 != null">
+				DATE1 = #{DATE1},
+			</if>
+			<if test="UPDATER != null">
+				<!-- UPDATER = #{UPDATER}, -->
+				UPDATE = 'U_MAERTER_E'
+			</if>
+			<if test="UPDATE_DATE != null">
+				UPDATE_DATE  = SYSDATE
+				<!-- UPDATE_DATE = #{UPDATE_DATE}, -->
+			</if>
+		</trim> 
+		 
+		 WHERE IDX = #{IDX} 
+	</update>
+	<!-- 2-3.3update 끝 --> 
+	
+	
+</mapper>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<style type="text/css">
+	#m_dialog>p{
+		font-size: 12px;
+	}
+</style>
+
+</head>
+<body>
+	<h1>jquery를 활용한 대화창</h1>
+	
+	<!-- 대화창으로 보여질 div -->
+	<div id="m_dialog" title="금요 공지!">
+		<p>와~ 금요일이다.<br/> 
+		어제 홍대 장난 아니더라(무서웠어요^^)</p>
+	</div>
+	
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//jquery자동 시작 부분!!
+			
+			$( "#m_dialog" ).dialog();
+		});
+	</script>
+	
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#box{
+		width: 250px;
+		height: 250px;
+		border: 2px solid black;
+	}
+</style>
+</head>
+<body>
+	<h1>배열과 each문</h1>
+	<input type="button" id="btn1" value="확인"/>
+	
+	<ul>
+		<li>자바</li>
+		<li>웹표준</li>
+		<li>서블릿JSP</li>
+		<li>XML</li>
+	</ul>
+	<ol>
+		<li>mybatis</li>
+		<li id="s1">spring</li>
+		<li>jpa</li>
+	</ol>
+	
+	<div id="box"></div>
+	
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+			//아이디가 btn1인 요소에 클릭이벤트 적용
+			$("#btn1").click(function(){
+				
+				//li태그들 중 아이디가 s1인 요소가 몇번째
+				//있는지
+				var ar =$("li");
+				
+				ar[1].style.color ="red";
+				$(ar[2]).css("color","blue");
+				ar.eq(3).css("color","green");//***
+				
+				var idx = ar.index($("#s1"));
+			
+				
+				ar.eq(idx).css("color","green");//***
+				$("ol").find("#s1").css("color","blue");//***
+				//li요소들이 모두 ar이라는
+				//변수에 저장되었다.(배열) 그 배열에서 원하는 id값을 가지고 
+				//있는 요소를 검색할 수 있다.
+			});
+		});
+	</script>
+</body>
+</html>
+
+
+
+
