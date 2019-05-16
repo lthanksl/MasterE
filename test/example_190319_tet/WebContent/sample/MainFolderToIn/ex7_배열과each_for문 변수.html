@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#box{
+		width: 250px;
+		height: 250px;
+		border: 2px solid black;
+	}
+</style>
+</head>
+<body>
+	<h1>배열과 each문</h1>
+	<input type="button" id="btn1" value="확인"/>
+	
+	<ul>
+		<li>자바</li>
+		<li>웹표준</li>
+		<li>서블릿JSP</li>
+		<li>XML</li>
+	</ul>
+	<ol>
+		<li>mybatis</li>
+		<li>spring</li>
+		<li>jpa</li>
+	</ol>
+	
+	<div id="box"></div>
+	
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+			//아이디가 btn1인 요소에 클릭이벤트 적용
+			$("#btn1").click(function(){
+				
+				//현재문서에서 태그이름이
+				// li인 요소들 모두 가져온다.
+				var ar = $("li");
+				//위에서 받은 li가 여러 개일 경우
+				//ar은 배열이 된다.
+				console.log("ar.length:"+ar.length);
+/* 				for ( var a in ar) {
+					console.log("a:"+a);	
+				} */
+				var str;
+				ar.each(function(){
+					console.log("ar:"+$(this).text());
+					str += $(this).text()+"<br/>";
+				});
+				$("#box").html(str);
+			});
+		});
+	</script>
+</body>
+</html>
+
+
+
+

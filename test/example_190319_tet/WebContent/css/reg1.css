@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.sub_title{
+	font-weight: bold;
+}
+.chk_area{
+	float: right;margin-top: 5px
+}
+.btn_center .btn{
+	background:url(../img/btn.png) no-repeat;
+}
+.sub_title
+{
+	background: url(../img/sub_title.png) no-repeat;text-indent: -9999px;
+}

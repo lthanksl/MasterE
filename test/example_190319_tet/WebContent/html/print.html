@@ -1,0 +1,2392 @@
+
+<!DOCTYPE html PUBLIC ' -//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html>
+<head>
+<title></title>
+<meta http-equiv='content-type' content='text/html; charset=utf-8' />
+<meta http-equiv='X-UA-Compatible' content='IE=8' />
+<script type='text/javascript'>
+	function printWindow() {
+		factory.printing.header = '';
+		factory.printing.footer = '';
+		factory.printing.portrait = true;
+		factory.printing.leftMargin = 10.0;
+		factory.printing.topMargin = 10.0;
+		factory.printing.rightMargin = 10.0;
+		factory.printing.bottomMargin = 10.0;
+		factory.printing.Print(true, window);
+	}
+</script>
+<style type='text/css'>
+<!--
+@font-face {
+	font-family: code39;
+	src: url(../CODE39-1.TTF);
+}
+
+@font-face {
+	font-family: code39;
+	src: url(../CODE39-1.eot);
+}
+
+caption {
+	visibility: hidden;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	font-size: 0;
+	line-height: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 150%;
+	color: #000;
+}
+
+table {
+	border-collapse: collapse;
+	padding: 0;
+	margin: 0;
+}
+
+table th, table td {
+	min-height: 16px;
+	padding: 5px 0;
+	border: 1px solid #000;
+}
+
+.page1 table tr {
+	line-height: 120%;
+}
+
+.page1 table th, .page1 table td {
+	font-size: 15px;
+}
+
+.page1 table td {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.page1_0 table tr {
+	line-height: 120%;
+}
+
+.page1_0 table th, .page1_0 table td {
+	font-size: 15px;
+}
+
+.page1_0 table td {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.page2 table td {
+	text-align: center;
+	line-height: 130%
+}
+
+.page2 .box {
+	padding: 50px 0px;
+}
+
+.page2_0 table td {
+	text-align: center;
+	line-height: 130%
+}
+
+.page2_0 .box {
+	padding: 50px 0px;
+}
+
+.page3 table td {
+	text-align: center;
+}
+
+.page3 table th {
+	font-size: 10px;
+	height: 4px;
+}
+
+.page3 table td {
+	font-size: 15px;
+	height: 4px;
+}
+
+.page3 .box {
+	width: 47%;
+	float: left;
+}
+
+.page3 .left {
+	padding: 0 0 10px 0;
+	float: left;
+	margin: 9px 0px;
+}
+
+.page3 .right {
+	padding: 0 0 10px 25px;
+	float: right;
+	margin: 9px 0px;
+}
+
+.page3_0 table td {
+	text-align: center;
+}
+
+.page3_0 table th {
+	font-size: 10px;
+	height: 4px;
+}
+
+.page3_0 table td {
+	font-size: 15px;
+	height: 4px;
+}
+
+.page3_0 .box {
+	width: 47%;
+	float: left;
+}
+
+.page3_0 .left {
+	padding: 0 0 10px 0;
+	float: left;
+	margin: 9px 0px;
+}
+
+.page3_0 .right {
+	padding: 0 0 10px 25px;
+	float: right;
+	margin: 9px 0px;
+}
+
+@page {
+	size: a4;
+	page-break-after: always;
+}
+
+@media print {
+	.page1 {
+		page-break-before: always;
+	}
+	.page2 {
+		page-break-before: always;
+	}
+	.page3 {
+		page-break-before: always;
+	}
+}
+-->
+</style>
+</head>
+<body onload='printWindow();'>
+	<object id='factory' style='display: none;' viewastext
+		classid='clsid:1663ed61-23eb-11d2-b92f-008048fdd814'
+		codebase='../smsx.cab#Version=7,0,0,8'></object>
+	<div id='wrapper'>
+		<table width='100%' summary='업체코드,업체명,납품번호,납품일자'>
+			<colgroup>
+				<col width='12%' />
+				<col width='23%' />
+				<col width='30%' />
+				<col width='12%' />
+				<col width='23%' />
+			</colgroup>
+			<div style='margin-top: 7px; height: 24px; font-size: 12px;'>
+				<div
+					style='float: left; width: 20%; text-align: left; font-size: 10px;'>
+					ls_nowTime</div>
+				<div style='float: left; width: 60%; text-align: right;'>출 력 자
+					:</div>
+				<div style='float: left; width: 20%; text-align: right;'>ls_UserNM
+					( ls_UserCD )</div>
+			</div>
+			<tbody>
+				<tr>
+					<th scope='col'>업체코드</th>
+					<td style='padding-left: 5px;'>Is_Supp_CD</td>
+					<th rowspan='2' style='font-size: 220%;'>납 품 증</th>
+					<th scope='col'>납품번호</th>
+					<td style='padding-left: 5px;'>Is_DC_NO</td>
+				</tr>
+				<tr>
+					<th scope='col'>업체명</th>
+					<td style='padding-left: 5px;'>Is_Supp_NM</td>
+					<th scope='col'>납품일자</th>
+					<td style='padding-left: 5px;'>Is_DC_DATE</td>
+				</tr>
+			</tbody>
+		</table>
+		<div style='text-align: center; padding: 20px 0px 20px 0;'>
+			<span style='font-family: code39; font-size: 40px; display: block;'>*Is_DC_NO*</span>
+		</div>
+		<table width='100%' summary='업체코드,업체명,납품번호,납품일자'>
+			<colgroup>
+				<col width='5%' />
+				<col width='10%' />
+				<col width='8%' />
+				<col width='17%' />
+				<col width='15%' />
+				<col width='9%' />
+				<col width='9%' />
+				<col width='9%' />
+				<col width='9%' />
+				<col width='9%' />
+			</colgroup>
+			<thead>
+				<tr>
+					<th rowspan='2' scope='row'
+						style='padding-top: 0px; padding-bottom: 0px;'>No</th>
+					<th rowspan='2' scope='row'
+						style='padding-top: 0px; padding-bottom: 0px;'>품번</th>
+					<th rowspan='2' scope='row'
+						style='padding-top: 0px; padding-bottom: 0px;'>차종</th>
+					<th rowspan='2' scope='row'
+						style='padding-top: 0px; padding-bottom: 0px;'>품명</th>
+					<th rowspan='2' scope='row'
+						style='padding-top: 0px; padding-bottom: 0px;'>규격</th>
+					<th scope='row' style='padding-top: 0px; padding-bottom: 0px;'>수용수</th>
+					<th scope='row' style='padding-top: 0px; padding-bottom: 0px;'>저장<br />위치
+					</th>
+					<th rowspan='2' scope='row'
+						style='padding-top: 0px; padding-bottom: 0px;'>납품량</th>
+					<th rowspan='2' scope='row'
+						style='padding-top: 0px; padding-bottom: 0px;'>불량<br />수량
+					</th>
+					<th rowspan='2' scope='row'
+						style='padding-top: 0px; padding-bottom: 0px;'>실입<br />고량
+					</th>
+				</tr>
+				<tr>
+					<th scope='row'>단위</th>
+					<th scope='row'>검사<br />등급
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+				<tr>
+					<td rowspan='2' style='text-align: center; padding-left: 5px;'>
+						ROW_NUM</td>
+					<td rowspan='2' style='text-align: center;'>PART_CD</td>
+					<td rowspan='2' style='text-align: center;'>CAR_CD</td>
+					<td rowspan='2' style='text-align: left; padding-left: 5px;'>
+						PART_NM</td>
+					<td rowspan='2' style='text-align: center;'>PART_STD</td>
+					<td style='text-align: center;'>PACK_QTY</td>
+					<td style='text-align: center;'>PART_LOC</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						ORDER_QTY</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+					</td>
+					<td rowspan='2' style='text-align: right; padding-right: 5px;'>
+						1</td>
+				</tr>
+				<tr>
+					<td style='text-align: center;'>PART_UNIT</td>
+					<td style='text-align: center;'>PART_ABC</td>
+				</tr>
+			</tbody>
+		</table>
+		<div
+			style='margin-top: 10px; margin-left: 7px; float: left; width: 49%; height: 80px; font-size: 11px; border-width: 1px; border-style: solid;'>
+			[MEMO]<br />&nbsp;ls_memo
+		</div>
+		<div
+			style='margin-top: 10px; float: right; width: 49%; height: 80px; font-size: 15px;'>
+			<div style='float: left; width: 30%; text-align: right;'>인 계 자
+				:</div>
+			<div style='float: right; width: 70%; text-align: right;'>( 인 )</div>
+			<div style='float: left; width: 30%; text-align: right;'>품질검수 :
+			</div>
+			<div style='float: right; width: 70%; text-align: right;'>( 인 )</div>
+			<div style='float: left; width: 30%; text-align: right;'>인 수 자
+				:</div>
+			<div style='float: right; width: 70%; text-align: right;'>( 인 )</div>
+		</div>
+	</div>
+	
+</body>
+</html>

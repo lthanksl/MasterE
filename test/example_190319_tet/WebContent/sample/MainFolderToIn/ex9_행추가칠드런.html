@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table{
+		width: 400px;
+		border-collapse: collapse;
+	}
+	table th, table td{
+		border: 1px solid black;
+		padding: 4px 3px;
+	}
+	table>thead>tr:first-child>td{
+		text-align: right;
+	}
+</style>
+</head>
+<body>
+	<h1>jQuery를 이용한 행추가</h1>
+	<br/>
+	<table>
+		<caption>연습테이블</caption>
+		<colgroup>
+			<col width="60px"/>
+			<col width="*"/>
+			<col width="80px"/>
+		</colgroup>
+		<thead>
+			<tr>
+				<td colspan="3">
+					<input type="button" 
+					value="추가" 
+					id="add_btn"/>
+				</td>
+			</tr>
+			<tr>
+				<th>컬럼1</th>
+				<th>컬럼2</th>
+				<th>컬럼3</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+			//add_btn에게 클릭이벤트 적용
+			$("#add_btn").on("click",function(){
+				var str = "<tr>";
+				
+				//td태그를 3개추가
+				//for(var i=0; i<3; i++){}
+				$("table thead tr:nth-child(2)>th").each(function(){
+					str += "<td>&nbsp;</td>"
+				});
+				
+				str += "</tr>";
+				
+				//$("table>tbody").html(str);
+				//tbody에 추가가 아니라 기존것을 삭제하고
+				//넣어주는 형태이미로 평생 한개만 적용된다.
+				$("table>tbody").append(str);
+				
+				console.log("^^^");
+			});
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

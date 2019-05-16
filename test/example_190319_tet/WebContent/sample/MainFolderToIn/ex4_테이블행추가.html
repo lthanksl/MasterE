@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#t1{
+		width: 350px;
+		border-collapse: collapse;
+	}
+	#t1 th, #t1 td{
+		border: 1px solid black;
+		padding: 4px;
+	}
+	#t1 caption {
+		text-indent: -9999px;
+		height: 0;
+	}
+	#t1 thead>tr:first-child td{
+		/* 테이블의 thead에 있는 첫번째 tr의
+			td 선택! */
+		text-align: right;
+		border: none;
+	}
+	
+	.selected{
+		background-color: rgba(0,100,255, .4);
+		border: 2px dashed #00f;
+	}
+	
+	#t1 input[type=text]{
+		width: 100px;
+		padding: 3px;
+		border: 1px solid #ababab;
+		border-radius: 4px;
+	}
+</style>
+</head>
+<body>
+	<h1>테이블 행 추가</h1>
+	
+	
+	<table id="t1">
+		<caption>연습 테이블</caption>
+		<colgroup>
+			<col width="50px;"/>
+			<col width="90px;"/>
+			<col width="*"/>
+			<col width="60px;"/>
+		</colgroup>
+		<thead>
+			<tr>
+				<td colspan="4">
+					<button type="button" 
+					onclick="addRow()">
+						추가
+					</button>
+				</td>
+			</tr>
+			<tr>
+				<th>번호</th>
+				<th>이름</th>
+				<th>연락처</th>
+				<th>삭제</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+		</tbody>
+	</table>
+<script type="text/javascript">
+
+	var idx = 0;
+	
+	function addRow(){
+		// tr에 들어갈 td를 3개 만들자!
+		var td1 = document.createElement("td");
+		var td2 = document.createElement("td");
+		var td3 = document.createElement("td");
+		var td4 = document.createElement("td");
+		
+		//td2와 td3에 들어갈 input태그를 만들자!
+		var input1 = document.createElement(
+				"input");// <input></input>
+		
+		//위에서 생성된 input태그에 필요한
+		// 지정된 속성들을 추가한다.
+		input1.type = "text";
+		input1.name = "name";
+		input1.id = "s_name"+idx;// id="s_name0"
+		
+		var input2 = document.createElement(
+				"input");
+		input2.type = "text";
+		input2.name = "phone";
+		input2.id = "s_phone"+idx;
+		
+		var bt = document.createElement("input");
+		//var bt = document.createElement("button");
+		
+		bt.type = "button";
+		bt.value = "삭제";
+		//bt.innerText = "삭제";//<button....>삭제</button>
+		
+		td1.innerText = ++idx; //<td>1</td>
+		td2.appendChild(input1);
+		td3.appendChild(input2);
+		td4.appendChild(bt);
+		
+		//이제 위의 td들을 가질 tr을 만들자
+		var tr = document.createElement("tr");
+		
+		//tr에 들어오는 자식요소들의
+		//문자값들을 가운데 정렬 시킨다.
+		// style에서는 text-align: cneter;
+		tr.style.textAlign = "center";
+		
+		//생성된 tr안에 자식으로 td들을 추가한다.
+		tr.appendChild(td1);
+		tr.appendChild(td2);
+		tr.appendChild(td3);
+		tr.appendChild(td4);
+		
+		// 테이블객체 얻어내기
+		var table = document.getElementById("t1");
+		
+		//이제 tr를 가질 tbody를 알아낸다.
+		var tbody = table.children[3];
+		
+		//검색된 tbody에 생성된 tr을 
+		//자식으로 추가한다.
+		tbody.appendChild(tr);
+		
+		//tr에 마우스가 올라왔을 때 이벤트 처리
+		tr.onmouseover = function(){
+			//현재 행번호를 테이블에
+			//rowIdx라는 이름으로 저장!
+			table.rowIdx = this.rowIndex;
+		};
+		
+		//생성된 bt에 클릭이벤트를 적용한다.
+		//bt.onclick = del;//함수명
+		bt.onclick = function(){
+			table.deleteRow(table.rowIdx);//행번호로 행 삭제
+		};
+		
+	}//addRow함수의 끝
+	
+	function del(){
+		alert("**");
+	}
+</script>
+</body>
+</html>
+
+
+
+

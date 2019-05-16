@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+  <header>
+    <resultCode>0000</resultCode>
+    <resultMsg>OK</resultMsg>
+  </header>
+  <body>
+    <items>
+      <item>
+        <addr1>충청남도 부여군 규암면 백제문로 388</addr1>
+        <areacode>34</areacode>
+        <cat1>A02</cat1>
+        <cat2>A0208</cat2>
+        <cat3>A02080100</cat3>
+        <contentid>1258353</contentid>
+        <contenttypeid>15</contenttypeid>
+        <createdtime>20110418095420</createdtime>
+        <eventenddate>20191026</eventenddate>
+        <eventstartdate>20190302</eventstartdate>
+        <firstimage>http://tong.visitkorea.or.kr/cms/resource/54/2483454_image2_1.JPG</firstimage>
+        <firstimage2>http://tong.visitkorea.or.kr/cms/resource/54/2483454_image2_1.JPG</firstimage2>
+        <mapx>126.8997016069</mapx>
+        <mapy>36.3048428766</mapy>
+        <mlevel>6</mlevel>
+        <modifiedtime>20190211170707</modifiedtime>
+        <readcount>56454</readcount>
+        <sigungucode>6</sigungucode>
+        <tel>041-832-5765</tel>
+        <title>가무악극으로 만나는 토요 상설공연 2019</title>
+      </item>
+      <item>
+        <addr1>강원도 고성군 죽왕면 삼포리 1-1</addr1>
+        <areacode>32</areacode>
+        <cat1>A02</cat1>
+        <cat2>A0207</cat2>
+        <cat3>A02070200</cat3>
+        <contentid>2541578</contentid>
+        <contenttypeid>15</contenttypeid>
+        <createdtime>20180403150716</createdtime>
+        <eventenddate>20191231</eventenddate>
+        <eventstartdate>20190101</eventstartdate>
+        <firstimage>http://tong.visitkorea.or.kr/cms/resource/73/2541573_image2_1.jpg</firstimage>
+        <firstimage2>http://tong.visitkorea.or.kr/cms/resource/73/2541573_image2_1.jpg</firstimage2>
+        <mapx>128.5370623742</mapx>
+        <mapy>38.3128520737</mapy>
+        <mlevel>6</mlevel>
+        <modifiedtime>20190402175430</modifiedtime>
+        <readcount>10052</readcount>
+        <sigungucode>2</sigungucode>
+        <tel>1666-5683</tel>
+        <title>가족여행과 함께하는 고성 오션투유 삼포해수욕장 연날리기 축제 2019</title>
+      </item>
+      <item>
+        <addr1>제주특별자치도 서귀포시 대정읍</addr1>
+        <addr2>가파도 일원</addr2>
+        <areacode>39</areacode>
+        <cat1>A02</cat1>
+        <cat2>A0207</cat2>
+        <cat3>A02070200</cat3>
+        <contentid>712175</contentid>
+        <contenttypeid>15</contenttypeid>
+        <createdtime>20090326164207</createdtime>
+        <eventenddate>20190512</eventenddate>
+        <eventstartdate>20190330</eventstartdate>
+        <firstimage>http://tong.visitkorea.or.kr/cms/resource/18/1999118_image2_1.jpg</firstimage>
+        <firstimage2>http://tong.visitkorea.or.kr/cms/resource/18/1999118_image3_1.jpg</firstimage2>
+        <mapx>126.2717384970</mapx>
+        <mapy>33.1701766897</mapy>
+        <mlevel>6</mlevel>
+        <modifiedtime>20190305111820</modifiedtime>
+        <readcount>73810</readcount>
+        <sigungucode>3</sigungucode>
+        <tel>가파리사무소 064-794-7130</tel>
+        <title>가파도청보리축제 2019</title>
+      </item>
+      <item>
+        <addr1>강원도 강릉시 율곡로3139번길 24</addr1>
+        <addr2>(죽헌동)</addr2>
+        <areacode>32</areacode>
+        <cat1>A02</cat1>
+        <cat2>A0208</cat2>
+        <cat3>A02080100</cat3>
+        <contentid>2485750</contentid>
+        <contenttypeid>15</contenttypeid>
+        <createdtime>20170316153002</createdtime>
+        <eventenddate>20191103</eventenddate>
+        <eventstartdate>20190413</eventstartdate>
+        <firstimage>http://tong.visitkorea.or.kr/cms/resource/85/2487085_image2_1.JPG</firstimage>
+        <firstimage2>http://tong.visitkorea.or.kr/cms/resource/85/2487085_image2_1.JPG</firstimage2>
+        <mapx>128.8766149376</mapx>
+        <mapy>37.7782679956</mapy>
+        <mlevel>6</mlevel>
+        <modifiedtime>20190415131254</modifiedtime>
+        <readcount>2783</readcount>
+        <sigungucode>1</sigungucode>
+        <title>강릉 관노가면극 2019</title>
+      </item>
+      <item>
+        <addr1>강원도 강릉시 단오장길 1</addr1>
+        <areacode>32</areacode>
+        <cat1>A02</cat1>
+        <cat2>A0207</cat2>
+        <cat3>A02070200</cat3>
+        <contentid>531391</contentid>
+        <contenttypeid>15</contenttypeid>
+        <createdtime>20080414154012</createdtime>
+        <eventenddate>20190610</eventenddate>
+        <eventstartdate>20190603</eventstartdate>
+        <firstimage>http://tong.visitkorea.or.kr/cms/resource/95/2543695_image2_1.jpg</firstimage>
+        <firstimage2>http://tong.visitkorea.or.kr/cms/resource/95/2543695_image2_1.jpg</firstimage2>
+        <mapx>128.8950169869</mapx>
+        <mapy>37.7482134974</mapy>
+        <mlevel>6</mlevel>
+        <modifiedtime>20190321173536</modifiedtime>
+        <readcount>143097</readcount>
+        <sigungucode>1</sigungucode>
+        <tel>033-641-1593</tel>
+        <title>강릉 단오제 2019</title>
+      </item>
+      <item>
+        <addr1>강원도 강릉시 주문진읍 해안로 1730</addr1>
+        <areacode>32</areacode>
+        <cat1>A02</cat1>
+        <cat2>A0208</cat2>
+        <cat3>A02081300</cat3>
+        <contentid>2494459</contentid>
+        <contenttypeid>15</contenttypeid>
+        <createdtime>20170530153902</createdtime>
+        <eventenddate>20191231</eventenddate>
+        <eventstartdate>20190101</eventstartdate>
+        <firstimage>http://tong.visitkorea.or.kr/cms/resource/57/2589257_image2_1.jpg</firstimage>
+        <firstimage2>http://tong.visitkorea.or.kr/cms/resource/57/2589257_image2_1.jpg</firstimage2>
+        <mapx>128.8285935985</mapx>
+        <mapy>37.8895291758</mapy>
+        <mlevel>6</mlevel>
+        <modifiedtime>20190122162055</modifiedtime>
+        <readcount>17527</readcount>
+        <sigungucode>1</sigungucode>
+        <tel>1522-8905</tel>
+        <title>강릉 하트불꽃크루즈 2019</title>
+      </item>
+      <item>
+        <addr1>서울특별시 강북구 화계사길 117</addr1>
+        <addr2>(수유동)</addr2>
+        <areacode>1</areacode>
+        <cat1>A02</cat1>
+        <cat2>A0208</cat2>
+        <cat3>A02081300</cat3>
+        <contentid>2592414</contentid>
+        <contenttypeid>15</contenttypeid>
+        <createdtime>20190318154141</createdtime>
+        <eventenddate>20191020</eventenddate>
+        <eventstartdate>20190413</eventstartdate>
+        <firstimage>http://tong.visitkorea.or.kr/cms/resource/12/2592412_image2_1.JPG</firstimage>
+        <firstimage2>http://tong.visitkorea.or.kr/cms/resource/12/2592412_image2_1.JPG</firstimage2>
+        <mapx>127.0070665450</mapx>
+        <mapy>37.6325109780</mapy>
+        <mlevel>6</mlevel>
+        <modifiedtime>20190318154941</modifiedtime>
+        <readcount>17</readcount>
+        <sigungucode>3</sigungucode>
+        <tel>02-761-2588</tel>
+        <title>강북구 근현대사 역사탐방여행 2019</title>
+      </item>
+      <item>
+        <addr1>경상남도 거제시 계룡로11길 26</addr1>
+        <areacode>36</areacode>
+        <cat1>A02</cat1>
+        <cat2>A0207</cat2>
+        <cat3>A02070200</cat3>
+        <contentid>589170</contentid>
+        <contenttypeid>15</contenttypeid>
+        <createdtime>20080717172617</createdtime>
+        <eventenddate>20190804</eventenddate>
+        <eventstartdate>20190801</eventstartdate>
+        <firstimage>http://tong.visitkorea.or.kr/cms/resource/91/2551991_image2_1.png</firstimage>
+        <firstimage2>http://tong.visitkorea.or.kr/cms/resource/91/2551991_image2_1.png</firstimage2>
+        <mapx>128.6184763736</mapx>
+        <mapy>34.8829397876</mapy>
+        <mlevel>6</mlevel>
+        <modifiedtime>20190422181922</modifiedtime>
+        <readcount>22177</readcount>
+        <sigungucode>1</sigungucode>
+        <tel>055-639-4784</tel>
+        <title>거제 바다로세계로 2019</title>
+      </item>
+      <item>
+        <addr1>경상남도 거제시 계룡로11길 26</addr1>
+        <addr2>(고현동)</addr2>
+        <areacode>36</areacode>
+        <cat1>A02</cat1>
+        <cat2>A0207</cat2>
+        <cat3>A02070200</cat3>
+        <contentid>2543846</contentid>
+        <contenttypeid>15</contenttypeid>
+        <createdtime>20180423155229</createdtime>
+        <eventenddate>20190505</eventenddate>
+        <eventstartdate>20190505</eventstartdate>
+        <firstimage>http://tong.visitkorea.or.kr/cms/resource/37/2600237_image2_1.jpg</firstimage>
+        <firstimage2>http://tong.visitkorea.or.kr/cms/resource/37/2600237_image2_1.jpg</firstimage2>
+        <mapx>128.6184763736</mapx>
+        <mapy>34.8829397876</mapy>
+        <mlevel>6</mlevel>
+        <modifiedtime>20190430164058</modifiedtime>
+        <readcount>1049</readcount>
+        <sigungucode>1</sigungucode>
+        <tel>055-639-3823</tel>
+        <title>거제 어린이 축제 2019</title>
+      </item>
+      <item>
+        <addr1>경상남도 거창군 거창읍 심소정길 39-36</addr1>
+        <areacode>36</areacode>
+        <cat1>A02</cat1>
+        <cat2>A0207</cat2>
+        <cat3>A02070200</cat3>
+        <contentid>1798646</contentid>
+        <contenttypeid>15</contenttypeid>
+        <createdtime>20130306142512</createdtime>
+        <eventenddate>20190929</eventenddate>
+        <eventstartdate>20190926</eventstartdate>
+        <firstimage>http://tong.visitkorea.or.kr/cms/resource/06/2588806_image2_1.jpg</firstimage>
+        <firstimage2>http://tong.visitkorea.or.kr/cms/resource/06/2588806_image2_1.jpg</firstimage2>
+        <mapx>127.9263598180</mapx>
+        <mapy>35.6951331926</mapy>
+        <mlevel>6</mlevel>
+        <modifiedtime>20190117174646</modifiedtime>
+        <readcount>29285</readcount>
+        <sigungucode>2</sigungucode>
+        <tel>055-940-3491</tel>
+        <title>거창한마당대축제 2019</title>
+      </item>
+    </items>
+    <numOfRows>10</numOfRows>
+    <pageNo>1</pageNo>
+    <totalCount>399</totalCount>
+  </body>
+</response>
