@@ -84,11 +84,9 @@ public class DAOManState {
 
 	// 1.1멤버 변수
 	// DB 연결에 필요한 객체들
-	Connection con;
-	PreparedStatement psSearch;
-	ResultSet rs;
 
 	public VOStateMan[] SelectOne(ArrayList<String> pPara) throws Exception {
+		VOStateMan[] ar;
 
 		ArrayList<String> columns = new ArrayList<String>();
 		StringBuilder sql = new StringBuilder(); 
@@ -100,9 +98,10 @@ public class DAOManState {
 		sql.append(" SELECT * FROM STATEMAN_T  ");
 		sql.append(" 		WHERE S_ID  = ? ");
 		ArrayList<ArrayList<String>> ListAr = sqlUtil.GetData(sql.toString(), pPara, columns);
-		VOStateMan[] ar;
+		
 		ar = new VOStateMan[ListAr.size()];
 		for (int i = 0; i < ListAr.size(); i++) {
+			ar[i] =  new VOStateMan();
 			ar[i].setS_ID(ListAr.get(i).get(0));
 			ar[i].setS_SUBJECT(ListAr.get(i).get(1));
 			ar[i].setS_CATEGORY(ListAr.get(i).get(2));

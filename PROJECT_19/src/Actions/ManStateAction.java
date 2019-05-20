@@ -1,5 +1,6 @@
 package Actions;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -48,6 +49,20 @@ public class ManStateAction {
 	}
 	@RequestMapping("/stateList.MASE")
 	public String jqGrid() {
+		return "mngManState"; // ??/mngManState.jsp호출
+	}
+	
+	@RequestMapping("/stateOneS.MASE")
+	public String stateOneS(VOStateMan pVo) {
+		try {
+			ArrayList<String> para = new ArrayList<String>();
+			para.add("1");
+			/* para.add(pVo.getS_ID()); */
+			VOStateMan[] ar = dao.SelectOne(para);
+			int dd = 0;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return "mngManState"; // ??/mngManState.jsp호출
 	}
 }
