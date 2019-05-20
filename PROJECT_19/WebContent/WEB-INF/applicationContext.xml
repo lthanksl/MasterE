@@ -45,7 +45,7 @@
 		<constructor-arg ref="factory"/>
 	</bean>
 	 
-	<bean id="idao1" class="mybatis.dao.EmpDAO" />
+	
 	<bean id="idao2" class="mybatis.dao.DAOManState" />
  
 </beans>
