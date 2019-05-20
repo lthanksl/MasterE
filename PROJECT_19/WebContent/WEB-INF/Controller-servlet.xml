@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd 
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+   
+<!-- 
+	스프리이 환경뿐만 아니라 JSP에서도 폼에 파일을
+	첨부할 때 encType="multipart/form-data"로 지정한다.
+	이렇게 되면 일반적인 request객체로 파일 뿐만 아니라
+	다른 파라미터 들을 받을 수 없다.
+	그래서 반드시 MultipartRequest객체가 필요한데...
+	스프링에서는 다음과 같은 객체가 지원된다.
+	(multipartResolver다)
+	
+	필요한 라이브러리
+		- commons-fileupload
+		- commons-io
+ -->   
+ 	<context:annotation-config/>
+ 	
+ 	<bean id="jsonHttpMessageConverter"
+		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="jsonHttpMessageConverter" />
+			</list>
+		</property>
+	</bean>
+ 	
+ 	<bean id="multipartResolver" 
+ 	class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+ 		<property name="defaultEncoding" value="utf-8"/>
+ 		<property name="maxUploadSize" value="-1"/>
+ 	</bean>
+   
+   
+   <!-- 오토로 컨트롤(action) 등록 -->
+   <context:component-scan base-package="Actions"/>
+   
+   
+      <!-- View Resolver설정 -->
+   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+   		<property name="suffix" value=".jsp"/>
+   		<property name="prefix" value="/190513_project/"/>
+   		<!-- <property name="prefix" value="/SpringMVC/"/> -->
+   </bean>
+</beans>   
+
+
+
+
