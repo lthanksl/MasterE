@@ -89,12 +89,12 @@ public class DAOManState {
 		VOStateMan[] ar;
 
 		ArrayList<String> columns = new ArrayList<String>();
-		StringBuilder sql = new StringBuilder(); 
-
+	
 		columns.add("S_ID");
 		columns.add("S_SUBJECT");
 		columns.add("S_CATEGORY");
 		
+		StringBuilder sql = new StringBuilder(); 
 		sql.append(" SELECT * FROM STATEMAN_T  ");
 		sql.append(" 		WHERE S_ID  = ? ");
 		ArrayList<ArrayList<String>> ListAr = sqlUtil.GetData(sql.toString(), pPara, columns);
