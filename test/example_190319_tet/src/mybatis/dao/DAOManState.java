@@ -14,7 +14,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import mybatis.vo.VOStateMan;
-import util.sqlCon;
+import util.sqlUtil;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -99,7 +99,7 @@ public class DAOManState {
 		
 		sql.append(" SELECT * FROM STATEMAN_T  ");
 		sql.append(" 		WHERE S_ID  = ? ");
-		ArrayList<ArrayList<String>> ListAr = GetData(sql.toString(), pPara, columns);
+		ArrayList<ArrayList<String>> ListAr = sqlUtil.GetData(sql.toString(), pPara, columns);
 		VOStateMan[] ar;
 		ar = new VOStateMan[ListAr.size()];
 		for (int i = 0; i < ListAr.size(); i++) {
@@ -112,30 +112,5 @@ public class DAOManState {
 
 	}
 
-	private ArrayList<ArrayList<String>> GetData(String sql, ArrayList<String> pPara, ArrayList<String> pColumns)
-			throws Exception, SQLException {
-		con = sqlCon.con();
-		psSearch = con.prepareStatement(sql);
-		for (int i = 1; i <= pPara.size(); i++) {
-			psSearch.setString(i, pPara.get(i-1));
-		}
-
-		rs = psSearch.executeQuery();
-
-		ArrayList<String> Lists1 = new ArrayList<String>();
-		ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>();
-		int count =0;
-		while (rs.next()) {
-			for (int i = 0; i < pColumns.size(); i++) {
-				Lists1.add(rs.getString(pColumns.get(i)));
-				
-			}
-			data.add(Lists1);
-			count++;
-		}
-		
-		
-		return data;
-
-	}
+	
 }
