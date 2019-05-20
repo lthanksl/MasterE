@@ -1,0 +1,55 @@
+@charset "UTF-8";
+#contents_sub {
+	width: 900px; margin: 20px auto 40px auto; 
+	padding: 0px 130px;	
+}
+.sub_title{
+	font-weight: bold;
+	background: url(../img/sub_title.png) no-repeat;text-indent: -9999px;
+	height: 30px;
+	font-size: 12px;
+}
+.title_src{
+	font-size: 14px;font-weight: bold;margin-bottom: 30px;margin-top: 10px;
+}
+.guide_txt
+{
+	color:#c0c0c0;
+}
+.table_type01 {
+	border: 0px 0px;
+	
+}
+.table_type01 td,th{
+	border: 1px solid #c0c0c0;
+	padding: 10px;
+	
+	
+}
+
+.table_type01 td{
+	border-right: 0px;
+}
+.table_type01 th{
+	background-color: rgba(192, 192, 192, 0.2);
+	border-left: 0px;
+}
+.req{
+	display:inline-block;
+	background: url(../img/bult.png) no-repeat;
+	width: 7px; height: 7px;
+}
+.chk_area{
+	float: right;margin-top: 5px
+}
+.btn_center .btn{
+	background:url(../img/btn.png) no-repeat;
+}
+.hidden{
+	font-size: 15px;	
+}
+
+/** 폼 **/
+.table_type01 input[type=text],.table_type01 input[type=password]{
+	width: 110px;
+}
