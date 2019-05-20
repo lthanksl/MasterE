@@ -13,17 +13,18 @@ import java.util.Map;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import mybatis.vo.VOMember;
 import mybatis.vo.VOStateMan;
 import util.sqlUtil;
 
 
 
-public class DAOManState {
+public class DAOMember {
 
 	@Autowired
 	private SqlSessionTemplate ss;
 
-	public DAOManState() {
+	public DAOMember() {
 		System.out.println("DAOManState생성!");
 	}
 
@@ -31,30 +32,30 @@ public class DAOManState {
 		this.ss = ss;
 	}
 
-	public VOStateMan[] SelectAll() {
-		VOStateMan[] ar = null;
+	/*
+	 * public VOStateMan[] SelectAll() { VOStateMan[] ar = null;
+	 * 
+	 * List<VOStateMan> list = ss.selectList("ManState.all");
+	 * 
+	 * if (list != null && list.size() > 0) { ar = new VOStateMan[list.size()];
+	 * 
+	 * list.toArray(ar); }
+	 * 
+	 * return ar; }
+	 */
 
-		List<VOStateMan> list = ss.selectList("ManState.all");
-
-		if (list != null && list.size() > 0) {
-			ar = new VOStateMan[list.size()];
-
-			list.toArray(ar);
-		}
-
-		return ar;
-	}
-
-	public VOStateMan[] Select(VOStateMan pVo) {
-		VOStateMan[] ar = null;
+	public VOMember[] Select(VOMember pVo) {
+		VOMember[] ar = null;
 
 		Map<String, String> maps = new HashMap<String, String>();
-		maps.put("S_SUBJECT", pVo.getS_SUBJECT());
-		maps.put("S_CATEGORY", pVo.getS_CATEGORY());
-		List<VOStateMan> list = ss.selectList("ManState.Search1", maps);
+		/*
+		 * maps.put("S_SUBJECT", pVo.getS_SUBJECT()); maps.put("S_CATEGORY",
+		 * pVo.getS_CATEGORY());
+		 */
+		List<VOMember> list = ss.selectList("ManState.Search1", maps);
 
 		if (list != null && list.size() > 0) {
-			ar = new VOStateMan[list.size()];
+			ar = new VOMember[list.size()];
 
 			list.toArray(ar);
 		}

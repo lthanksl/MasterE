@@ -13,12 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import mybatis.dao.DAOManState;
-
+import mybatis.dao.DAOMember;
+import mybatis.vo.VOMember;
 import mybatis.vo.VOStateMan;
 
 
 @Controller
-public class ManMemberAction {
+public class MngMemberAction {
 	@Autowired
 	private ServletContext application;
 
@@ -27,10 +28,31 @@ public class ManMemberAction {
 
 	// DB처리를 수행하는 객체(DAO)
 	@Autowired
-	private DAOManState dao;
+	private DAOMember dao;
 	
 	
-	
+	@RequestMapping("/memberListJqGrid.inc")
+	@ResponseBody
+	public Map<String, Object> test22(VOMember pVo ) {
+		VOMember[] vo = dao.Select(pVo);
+		Map<String, Object> maps = new HashMap<String, Object>();
+		if(vo == null)
+		{
+			vo = new VOMember[0];
+		}
+		maps.put("data", vo);
+		/*
+		 * maps.put("total", 3); maps.put("page", 5); maps.put("records", 100);
+		 */
+		
+		
+		return maps;
+
+	}
+	@RequestMapping("/memberList.inc")
+	public String jqGrid() {
+		return "Master/mngMember"; // ??/mngManState.jsp호출
+	}
 	@RequestMapping("/member.inc")
 	public String stateOneS(VOStateMan pVo) {
 		try {

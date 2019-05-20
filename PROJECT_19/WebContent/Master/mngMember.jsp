@@ -51,6 +51,10 @@
 			<button type="button" 
 								 class="btn btn-primary" id="bt_Select">검색</button>
 			</div>
+			<div class="form-group">
+			<button type="button" 
+								 class="btn btn-primary" id="bt_insert">추가</button>
+			</div>
 		</div>
 		<table id="gridMain"></table>
 		<div id="jqGridPager"></div>
@@ -78,7 +82,9 @@
 
 <script type="text/javascript">
 	   
-	
+	$("#bt_insert").click(function () {
+		alert('1');
+	});
  	$("#bt_Select").click(function () {
 		
 	 var S_SUBJECT = $("#txt증상검색").val();

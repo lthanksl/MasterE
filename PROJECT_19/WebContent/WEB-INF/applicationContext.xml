@@ -47,6 +47,7 @@
 	 
 	
 	<bean id="idao2" class="mybatis.dao.DAOManState" />
+	<bean  class="mybatis.dao.DAOMember" />
  
 </beans>
 
