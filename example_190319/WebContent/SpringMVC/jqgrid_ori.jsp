@@ -13,7 +13,6 @@
 <link type="text/css" rel='stylesheet' href='css/jquery-ui.css' />
 
 
-
 <!-- jquery -->
 <link href="Content/themes/base/minified/jquery-ui.theme.min.css" rel="stylesheet" />
 <link href="Content/themes/base/minified/jquery-ui.structure.min.css" rel="stylesheet" />
