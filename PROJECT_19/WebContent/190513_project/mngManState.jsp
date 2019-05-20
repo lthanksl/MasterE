@@ -105,7 +105,7 @@
 //	        				S_CATEGORY: 종류,
 	        //				}
 	          //  };
-			
+			$("#gridMain").clearGridData();
 	 		// set the new data
 			$("#gridMain").jqGrid('setGridParam', result);
 			// hide the show message
