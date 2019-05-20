@@ -18,7 +18,7 @@ import mybatis.vo.VOStateMan;
 
 
 @Controller
-public class ManStateAction {
+public class ManMemberAction {
 	@Autowired
 	private ServletContext application;
 
@@ -29,30 +29,9 @@ public class ManStateAction {
 	@Autowired
 	private DAOManState dao;
 	
-	@RequestMapping("/stateListJqGrid.inc")
-	@ResponseBody
-	public Map<String, Object> test22(VOStateMan pVo ) {
-		VOStateMan[] vo = dao.Select(pVo);
-		Map<String, Object> maps = new HashMap<String, Object>();
-		if(vo == null)
-		{
-			vo = new VOStateMan[0];
-		}
-		maps.put("data", vo);
-		/*
-		 * maps.put("total", 3); maps.put("page", 5); maps.put("records", 100);
-		 */
-		
-		
-		return maps;
-
-	}
-	@RequestMapping("/stateList.inc")
-	public String jqGrid() {
-		return "mngManState"; // ??/mngManState.jsp호출
-	}
 	
-	@RequestMapping("/stateOneS.inc")
+	
+	@RequestMapping("/member.inc")
 	public String stateOneS(VOStateMan pVo) {
 		try {
 			ArrayList<String> para = new ArrayList<String>();
@@ -63,6 +42,6 @@ public class ManStateAction {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "mngManState"; // ??/mngManState.jsp호출
+		return "Master/mngMember"; // ??/mngManState.jsp호출
 	}
 }

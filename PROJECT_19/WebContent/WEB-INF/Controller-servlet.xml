@@ -47,7 +47,7 @@
       <!-- View Resolver설정 -->
    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
    		<property name="suffix" value=".jsp"/>
-   		<property name="prefix" value="/190513_project/"/>
+   		<property name="prefix" value="/"/>
    		<!-- <property name="prefix" value="/SpringMVC/"/> -->
    </bean>
 </beans>   
