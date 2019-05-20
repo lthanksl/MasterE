@@ -86,7 +86,8 @@
 	 var S_CATEGORY = $("#txt종류").val();
 	 $.ajax({
          url: "stateListJqGrid.MASE",
-         data:"S_SUBJECT="+encodeURIComponent(S_SUBJECT) +"&S_CATEGORY="+encodeURIComponent(S_CATEGORY), 
+         data:"S_SUBJECT="+encodeURIComponent(S_SUBJECT) +"&S_CATEGORY="+encodeURIComponent(S_CATEGORY),
+     	 type: "post",
          dataType: "json",
 	 	}).done(function(result){
 	 		console.log(result);
