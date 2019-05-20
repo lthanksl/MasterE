@@ -15,6 +15,7 @@ import mybatis.dao.DAOManState;
 
 import mybatis.vo.VOStateMan;
 
+
 @Controller
 public class ManStateAction {
 	@Autowired
