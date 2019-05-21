@@ -25,7 +25,7 @@ public class DAOMember {
 	private SqlSessionTemplate ss;
 
 	public DAOMember() {
-		System.out.println("DAOManState생성!");
+		System.out.println("DAOMember생성!");
 	}
 
 	public void setSs(SqlSessionTemplate ss) {

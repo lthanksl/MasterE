@@ -51,7 +51,7 @@ public class MngMemberAction {
 	}
 	@RequestMapping("/memberList.inc")
 	public String jqGrid() {
-		return "Master/mngMember"; // ??/mngManState.jsp호출
+		return "Master/mngMember"; // /Master/mngMember.jsp호출
 	}
 	@RequestMapping("/member.inc")
 	public String stateOneS(VOStateMan pVo) {
@@ -64,6 +64,6 @@ public class MngMemberAction {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "Master/mngMember"; // ??/mngManState.jsp호출
+		return "Master/mngMember"; // /Master/mngMember.jsp호출
 	}
 }
