@@ -33,11 +33,11 @@
 		</property>
 	</bean>
  	
- 	<bean id="multipartResolver" 
+ 	<!-- <bean id="multipartResolver" 
  	class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
  		<property name="defaultEncoding" value="utf-8"/>
  		<property name="maxUploadSize" value="-1"/>
- 	</bean>
+ 	</bean> -->
    
    
    <!-- 오토로 컨트롤(action) 등록 -->
