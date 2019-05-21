@@ -83,6 +83,10 @@
 	   
 
 $("#bt_insert").click(function () {
+	
+	
+
+	
 	var mydata = $("#gridMain").jqGrid('getGridParam','data');
 	$("#gridMain").clearGridData();
 	for(var i=0;i<mydata.length;i++){
