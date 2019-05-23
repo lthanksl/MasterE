@@ -3,5 +3,50 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mngTypeSeq">
+  <!-- 3-11.insert-->
+  <insert id="insert" parameterType="mybatis.vo.VOTypeSeq" >
+	INSERT INTO TYPE_SEQ_T ( TS_SEQ,CLASS_TYPE,SEQ_DATE,MAX_NUM )
+	VALUES ( TS_SEQ.NEXTVAL, #{CLASS_TYPE}, #{SEQ_DATE}, 1  )
+	</insert>
+  <!-- 3-11.insert 끝-->
+   <!-- 3-12.select -->
+  <select id="Search" parameterType="mybatis.vo.VOTypeSeq"
+	resultType="mybatis.vo.VOTypeSeq">
+
+	SELECT TS_SEQ,CLASS_TYPE,SEQ_DATE,SUBSTR(LPAD(MAX_NUM,8,'0'),-8) FROM
+	TYPE_SEQ_T
+	WHERE
+	CLASS_TYPE = #{CLASS_TYPE}
+	AND SEQ_DATE = #{SEQ_DATE}
+	
+
+
+</select>
+<select id="SearchSeq" parameterType="mybatis.vo.VOTypeSeq"
+	resultType="String">
+
+	SELECT CLASS_TYPE + SEQ_DATE +SUBSTR(LPAD(MAX_NUM + 1,8,'0'),-8) AS SEQ FROM
+	TYPE_SEQ_T
+	WHERE
+	CLASS_TYPE = #{CLASS_TYPE}
+	AND SEQ_DATE = #{SEQ_DATE}
+	
+
+
+</select>
+  <!-- 3-12.select 끝-->
   
+    <!-- 3-11.update-->
+  <update id="update" parameterType="mybatis.vo.VOTypeSeq">
+
+		UPDATE TYPE_SEQ_T  SET
+		 	MAX_NUM= #{MAX_NUM} + 1
+		WHERE
+			CLASS_TYPE = #{CLASS_TYPE}
+		AND SEQ_DATE = #{SEQ_DATE}
+	
+		
+	</update>
+  <!-- 3-11.update 끝-->
+ 
 </mapper>
