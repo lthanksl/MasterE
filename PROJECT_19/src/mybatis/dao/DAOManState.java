@@ -16,7 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import mybatis.vo.VOStateMan;
 import util.sqlUtil;
 
-
+/*11*/
 
 public class DAOManState {
 

@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-
+//test
 public  class sqlUtil {
 	// DB 연결에 필요한 객체들
 	static Connection con;
