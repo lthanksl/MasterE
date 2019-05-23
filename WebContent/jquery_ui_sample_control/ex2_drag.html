@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#popup{
+		width: 200px;
+		height: 120px;
+		padding: 10px;
+		border: 1px solid #000;
+		position: absolute;
+		top: 150px;
+		left: 250px;
+		background: rgba(0, 30, 220, 1);
+		display: none;
+		
+	}
+</style>
+</head>
+<body>
+	<h1>jquery를 활용한 팝업창</h1>
+	
+	<input type="button" value="팝업창" id="btn"/>
+	<br/>
+	<h2>..........</h2>
+	
+	<!-- 팝업창으로 사용할 div -->
+	<div id="popup">
+		<p>팝업창</p>
+		<br/>
+		<div id="close_area">
+			<input type="button" value="닫기"
+				id="close_btn"/>
+		</div>
+	</div>	
+	
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//jquery자동 시작 부분!!
+			
+			$( "#popup" ).draggable();
+			
+			//아이디가 btn인 요소에서 클릭할 때
+			//수행하는 이벤트 등록
+			$("#btn").bind("click",function(){
+				//아이디가 popup인 요소를
+				// 찾아 display속성을 block로 지정
+				$("#popup").css("display","block");
+			});
+			
+			//아이디가 close_btn인 요소를 
+			//클릭했을 때 아이디가 popup인 요소를
+			// 안보이도록 하는 이벤트
+			$("#close_btn").bind("click",function(){
+				
+				$("#popup").css("display","none");
+			});
+		});
+	
+		
+	</script>
+</body>
+</html>
+
+
+
+
+
