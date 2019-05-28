@@ -163,3 +163,23 @@ function trim(strTemp) {
 function jsValidation() {
     alert('1');
 }
+
+function InvalidateFalse(expression, message, o) {
+    try {
+        if (expression) {
+            alert(message);
+            if (o != null) {
+                o.focus();
+                o.select();
+
+                return false;
+            }
+        }
+        else
+            return true;
+    }
+    catch (e) {
+    }
+    return false;
+}
+

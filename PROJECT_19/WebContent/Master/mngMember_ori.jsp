@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>사용자 관리 화면</title>
+<title>Insert title here</title>
 <link type="text/css" rel="stylesheet" href="css/main.css" />
 <!-- <link type="text/css" rel="stylesheet" href="css/common.css" />  -->
 
@@ -23,6 +23,9 @@
 <link href="Content/bootstrap.min.css" rel="stylesheet" />
 <link href="Content/bootstrap-datetimepicker.css" rel="stylesheet" />
 
+
+<style type="text/css">
+</style>
 
 </head>
 <body>
@@ -71,7 +74,7 @@
 	</div>
 </body>
 
-<script type="text/javascript" src="js/Common.js"></script>
+
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 
 <script
@@ -89,10 +92,32 @@
 <script type="text/javascript" src="Scripts/jquery.cookie.js"></script>
 
 
+
 <script type="text/javascript">
-	$("#bt_Insert").click(function() {
-		
-		var result = window.showModalDialog('memberListI.inc', '', 'dialogWidth:1000px; dialogHeight:420px; center:yes; help:no;     status:no; resizable :yes; scroll:yes');
+	$("#bt_insert").click(function() {
+
+		var mydata = $("#gridMain").jqGrid('getGridParam', 'data');
+		$("#gridMain").clearGridData();
+		for (var i = 0; i < mydata.length; i++) {
+
+		}
+		var row = mydata[0];
+		var row2 = mydata[1];
+		var json = [];
+		json.push(row);
+		json.push(row2);
+		var paser = JSON.stringify(json);
+
+		/* '[{"s_ID" : 0, "s_SUBJECT" : 2,"s_CATEGORY": 3}]' */
+
+		// set the new data
+		$("#gridMain").jqGrid('setGridParam', {
+			data : json
+		});
+		// hide the show message
+
+		// refresh the grid
+		$("#gridMain").trigger('reloadGrid');
 	});
 	$("#bt_Select").click(
 			function() {

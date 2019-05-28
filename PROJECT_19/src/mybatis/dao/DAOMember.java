@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import mybatis.vo.VOMember;
 import mybatis.vo.VOStateMan;
+import mybatis.vo.VOTypeSeq;
 import util.sqlUtil;
 
 
@@ -31,7 +32,18 @@ public class DAOMember {
 	public void setSs(SqlSessionTemplate ss) {
 		this.ss = ss;
 	}
+	//3-11.3insert
+		public int insert(VOMember pVo) {
 
+			int result = ss.insert("MngMember.insert", pVo);
+			/*
+			 * if (result > 0) ss.commit(); else ss.rollback();
+			 */
+			return result;
+
+		}
+
+		// 3-11.3insert 끝
 	/*
 	 * public VOStateMan[] SelectAll() { VOStateMan[] ar = null;
 	 * 
@@ -44,23 +56,21 @@ public class DAOMember {
 	 * return ar; }
 	 */
 
-	public VOMember[] Select(VOMember pVo) {
+	public String Select(VOMember pVo) {
 		VOMember[] ar = null;
 
 		Map<String, String> maps = new HashMap<String, String>();
-		/*
-		 * maps.put("S_SUBJECT", pVo.getS_SUBJECT()); maps.put("S_CATEGORY",
-		 * pVo.getS_CATEGORY());
-		 */
-		List<VOMember> list = ss.selectList("ManState.Search1", maps);
+		
+		
+		List<VOMember> list = ss.selectList("MngMember.Search1", pVo);
 
 		if (list != null && list.size() > 0) {
-			ar = new VOMember[list.size()];
-
-			list.toArray(ar);
+			return "5";
 		}
+		else
+			return "4";
 
-		return ar;
+		
 	}
 	/*
 	 * public EmpVO[] search(String type, String value) {

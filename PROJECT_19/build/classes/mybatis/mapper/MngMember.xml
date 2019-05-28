@@ -4,14 +4,20 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="MngMember">
   
+  <!-- 3-11.insert-->
+  <insert id="insert" parameterType="mybatis.vo.VOMember" >
+INSERT INTO MEMBERS_T ( MEMBER_SEQ,ID,NAME,PHONE,PW ,DATE_INSERT,IP_INSERT,DATE_UPDATE,IP_UPDATE)
+VALUES ( #{MEMBER_SEQ}, #{ID}, #{NAME}, #{PHONE}, #{PW},sysdate, #{IP_INSERT},sysdate, #{IP_UPDATE})
+
+	</insert>
+  <!-- 3-11.insert 끝-->
   
-  
-  <select id="Search1" parameterType="java.util.Map" resultType="mybatis.vo.VOMember">
+  <select id="Search1" parameterType="mybatis.vo.VOMember" resultType="mybatis.vo.VOMember">
 
 		SELECT * FROM MEMBERS_T 
-<!-- 		WHERE
-			LOWER(S_SUBJECT) Like LOWER(#{S_SUBJECT})
-			AND LOWER(S_CATEGORY) Like LOWER(#{S_CATEGORY}) -->
+		WHERE
+			ID = #{ID}
+		
 	
 		
 	</select>
