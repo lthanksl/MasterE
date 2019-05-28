@@ -59,6 +59,7 @@ public class ManStateAction {
 			para.add("1");
 			/* para.add(pVo.getS_ID()); */
 			VOStateMan[] ar = dao.SelectOne(para);
+			
 			int dd = 0;
 		} catch (Exception e) {
 			e.printStackTrace();

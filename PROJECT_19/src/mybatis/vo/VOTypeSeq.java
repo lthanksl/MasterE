@@ -1,15 +1,10 @@
 package mybatis.vo;
 
 public class VOTypeSeq {
-	private String TS_SEQ,CLASS_TYPE,SEQ_DATE,MAX_NUM;
+	private String CLASS_TYPE,SEQ_DATE,MAX_NUM;
 
-	public String getTS_SEQ() {
-		return TS_SEQ;
-	}
+	
 
-	public void setTS_SEQ(String tS_SEQ) {
-		TS_SEQ = tS_SEQ;
-	}
 
 	public String getCLASS_TYPE() {
 		return CLASS_TYPE;

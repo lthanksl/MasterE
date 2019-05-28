@@ -19,6 +19,7 @@
   <mappers>
     
     <mapper resource="mybatis/mapper/ManState.xml"/><!-- mvc 설정 쓰면 안써도 되는 듯 -->
+    <mapper resource="mybatis/mapper/MngTypeSeq.xml"/><!-- mvc 설정 쓰면 안써도 되는 듯 -->
     
   </mappers>
 </configuration>

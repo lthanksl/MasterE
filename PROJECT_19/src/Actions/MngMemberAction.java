@@ -14,8 +14,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import mybatis.dao.DAOManState;
 import mybatis.dao.DAOMember;
+import mybatis.dao.DAOTypeSeq;
 import mybatis.vo.VOMember;
 import mybatis.vo.VOStateMan;
+import mybatis.vo.VOTypeSeq;
+import util.util;
 
 
 @Controller
@@ -29,6 +32,8 @@ public class MngMemberAction {
 	// DB처리를 수행하는 객체(DAO)
 	@Autowired
 	private DAOMember dao;
+	@Autowired
+	private DAOTypeSeq daoTypeSeq;
 	
 	
 	@RequestMapping("/memberListJqGrid.inc")
@@ -56,6 +61,13 @@ public class MngMemberAction {
 	@RequestMapping("/member.inc")
 	public String stateOneS(VOStateMan pVo) {
 		try {
+			VOTypeSeq vo = new VOTypeSeq();
+			java.util.Date date = new java.util.Date();
+
+			String dateR = util.Now(date, "yyyyMMdd");
+			String r = daoTypeSeq.mmGetSeq("mem",dateR);
+			
+			System.out.println(r);
 			ArrayList<String> para = new ArrayList<String>();
 			para.add("1");
 			/* para.add(pVo.getS_ID()); */

@@ -48,6 +48,8 @@
 	
 	<bean id="idao2" class="mybatis.dao.DAOManState" />
 	<bean  class="mybatis.dao.DAOMember" />
+	<bean  class="mybatis.dao.DAOTypeSeq" />
+	
  
 </beans>
 
