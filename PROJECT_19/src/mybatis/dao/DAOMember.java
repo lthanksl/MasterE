@@ -44,19 +44,11 @@ public class DAOMember {
 		}
 
 		// 3-11.3insert 끝
-	/*
-	 * public VOStateMan[] SelectAll() { VOStateMan[] ar = null;
-	 * 
-	 * List<VOStateMan> list = ss.selectList("ManState.all");
-	 * 
-	 * if (list != null && list.size() > 0) { ar = new VOStateMan[list.size()];
-	 * 
-	 * list.toArray(ar); }
-	 * 
-	 * return ar; }
-	 */
+		
+		//3-12.3select
+	
 
-	public String Select(VOMember pVo) {
+	public String SelectOne(VOMember pVo) {
 		VOMember[] ar = null;
 
 		Map<String, String> maps = new HashMap<String, String>();
@@ -72,28 +64,25 @@ public class DAOMember {
 
 		
 	}
-	/*
-	 * public EmpVO[] search(String type, String value) {
-	 * 
-	 * EmpVO[] ar = null;
-	 * 
-	 * //인자값 type을 searchType으로, // value를 searchValue로 Map에 저장 Map<String, String>
-	 * map = new HashMap<String, String>(); map.put("searchType", type);
-	 * map.put("searchValue", value);
-	 * 
-	 * List<EmpVO> list = ss.selectList("emp.Search1", map);
-	 * 
-	 * if(list != null && list.size() > 0) { ar = new EmpVO[list.size()];
-	 * 
-	 * list.toArray(ar); }
-	 * 
-	 * return ar; }
-	 */
+	public VOMember[] Select(VOMember pVo) {
+		VOMember[] ar = null;
 
-	// 1.1멤버 변수
-	// DB 연결에 필요한 객체들
+		List<VOMember> list = ss.selectList("MngMember.Search", pVo);
 
-	public VOStateMan[] SelectOne(ArrayList<String> pPara) throws Exception {
+		if (list != null && list.size() > 0) {
+			ar = new VOMember[list.size()];
+			list.toArray(ar);
+		}
+		
+		return ar;
+
+		
+	}
+	//3-12.3select 끝
+
+
+//임베디드 쿼리 샘플
+	public VOStateMan[] SelectEmbedeedsql(ArrayList<String> pPara) throws Exception {
 		VOStateMan[] ar;
 
 		ArrayList<String> columns = new ArrayList<String>();

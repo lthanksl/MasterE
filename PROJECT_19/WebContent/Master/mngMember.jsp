@@ -101,10 +101,8 @@
 				var S_CATEGORY = $("#txt종류").val();
 				$.ajax(
 						{
-							url : "stateListJqGrid.inc",
-							data : "S_SUBJECT=" + encodeURIComponent(S_SUBJECT)
-									+ "&S_CATEGORY="
-									+ encodeURIComponent(S_CATEGORY),
+							url : "memberListJqGrid.inc",
+							data : "",
 							type : "post",
 							dataType : "json",
 						}).done(function(result) {
@@ -146,25 +144,56 @@
 		jQuery("#gridMain").jqGrid({
 
 			url : 'https://javascript:void(0)',
-			colNames : [ '번호', '증상', '종류',
+			colNames : [ '번호', '아이디', '이름','폰번호','성별','입사일자','update_date','lev','point'
 
 			],
 			colModel : [ {
-				name : 's_ID',
-				index : 's_ID',
+				name : 'member_SEQ',
+				index : 'member_SEQ',
+				width : 130,
+				sorttype : "text"
+			}, {
+				name : 'id',
+				index : 'id',
 				width : 100,
 				sorttype : "text"
 			}, {
-				name : 's_SUBJECT',
-				index : 's_SUBJECT',
+				name : 'name',
+				index : 'name',
 				width : 100,
 				sorttype : "text"
-			}, {
-				name : 's_CATEGORY',
-				index : 's_CATEGORY',
-				width : 500,
+			},{
+				name : 'phone',
+				index : 'phone',
+				width : 100,
+				sorttype : "text"
+			},{
+				name : 'gender',
+				index : 'gender',
+				width : 80,
+				sorttype : "text"
+			},{
+				name : 'hire_DATE',
+				index : 'hire_DATE',
+				width : 80,
+				sorttype : "text"
+			},{
+				name : 'date_UPDATE',
+				index : 'date_UPDATE',
+				width : 120,
+				sorttype : "text"
+			},{
+				name : 'lev',
+				index : 'lev',
+				width : 80,
+				sorttype : "text"
+			},{
+				name : 'point',
+				index : 'point',
+				width : 80,
 				sorttype : "text"
 			},
+			
 
 			],
 

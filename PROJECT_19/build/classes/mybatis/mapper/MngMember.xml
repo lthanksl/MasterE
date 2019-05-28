@@ -12,6 +12,10 @@ VALUES ( #{MEMBER_SEQ}, #{ID}, #{NAME}, #{PHONE}, #{PW},sysdate, #{IP_INSERT},sy
 	</insert>
   <!-- 3-11.insert 끝-->
   
+    <select id="Search" parameterType="mybatis.vo.VOMember" resultType="mybatis.vo.VOMember">
+		SELECT * FROM MEMBERS_T 	
+	</select>
+  
   <select id="Search1" parameterType="mybatis.vo.VOMember" resultType="mybatis.vo.VOMember">
 
 		SELECT * FROM MEMBERS_T 

@@ -34,6 +34,7 @@ public class MngMemberAction {
 	@Autowired
 	private DAOTypeSeq daoTypeSeq;
 
+	//3-11.3insert
 	@RequestMapping("/memberListI.inc")
 	public String memberListI() {
 		return "Master/mngMemberInsert"; // /Master/mngMember.jsp호출
@@ -43,9 +44,8 @@ public class MngMemberAction {
 	@ResponseBody
 	public String insert(VOMember pVo) {
 
-		String rS = dao.Select(pVo);
-		if(rS.equals("5"))
-		{
+		String rS = dao.SelectOne(pVo);
+		if (rS.equals("5")) {
 			return "5";
 		}
 		java.util.Date date = new java.util.Date();
@@ -75,33 +75,36 @@ public class MngMemberAction {
 		 */
 
 	}
+	//3-11.3insert 끝
+	@RequestMapping("/memberListJqGrid.inc")
+	@ResponseBody
+	public Map<String, Object> test22(VOMember pVo) {
+		VOMember[] vo = dao.Select(pVo);
+		Map<String, Object> maps = new HashMap<String, Object>();
+		if (vo == null) {
+			vo = new VOMember[0];
+		}
+		maps.put("data", vo);
 
-	/*
-	 * @RequestMapping("/memberListJqGrid.inc")
-	 * 
-	 * @ResponseBody public Map<String, Object> test22(VOMember pVo) { VOMember[] vo
-	 * = dao.Select(pVo); Map<String, Object> maps = new HashMap<String, Object>();
-	 * if (vo == null) { vo = new VOMember[0]; } maps.put("data", vo);
-	 * 
-	 * maps.put("total", 3); maps.put("page", 5); maps.put("records", 100);
-	 * 
-	 * 
-	 * return maps;
-	 * 
-	 * }
-	 */
+		/*
+		 * maps.put("total", 3); maps.put("page", 5); maps.put("records", 100);
+		 */
 
-	@RequestMapping("/memberList.inc")
+		return maps;
+
+	}
+
+	@RequestMapping("/member.inc")
 	public String jqGrid() {
 		return "Master/mngMember"; // /Master/mngMember.jsp호출
 	}
 
-	@RequestMapping("/member.inc")
+	@RequestMapping("/member임베디드 쿼리.inc")
 	public String stateOneS(VOStateMan pVo) {
 		try {
-			VOTypeSeq vo = new VOTypeSeq();
-			java.util.Date date = new java.util.Date();
-
+			/*
+			 * VOTypeSeq vo = new VOTypeSeq(); java.util.Date date = new java.util.Date();
+			 */
 			/*
 			 * String dateR = util.Now(date, "yyyyMMdd"); String r =
 			 * daoTypeSeq.mmGetSeq("mem",dateR); // dataR =날짜 :"20190528"
@@ -110,7 +113,7 @@ public class MngMemberAction {
 			ArrayList<String> para = new ArrayList<String>();
 			para.add("1");
 			/* para.add(pVo.getS_ID()); */
-			VOStateMan[] ar = dao.SelectOne(para);
+			VOStateMan[] ar = dao.SelectEmbedeedsql(para);
 			int dd = 0;
 		} catch (Exception e) {
 			e.printStackTrace();
